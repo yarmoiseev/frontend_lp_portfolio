@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'variables';
 @import 'myreset';
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 // ===  COMMON  ===
 html {
@@ -10,19 +10,152 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	@include Font;
-	font-weight: $fw-regular;
+	@include Poppins;
+	font-weight: $fw-medium;
+	font-size: 1.8rem;
+	line-height: 2.7rem;
+	background-color: $col-back-dark;
+	color: $col-white;
+}
+.wrapper-outer {
+	padding: 0 2rem;
+}
+.wrapper-inner {
+	max-width: 115.7rem;
+	margin: 0 auto;
+}
+.projects, .techs, .add {
+	padding-bottom: 20rem;
+}
+#welcome-section {
+	height: 100vh;
 }
 // === / COMMON  ===
 
+// ===  NAVBAR  ===
+.menu {
+	padding: 4.6rem 2rem;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		font-size: 3rem;
+		line-height: 4.5rem;
+		padding-right: 4rem;
+	}
+	&__list { 
+		max-height: 2.7rem;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		white-space: nowrap;
+		& ul {
+			display: flex;
+			column-gap: 8rem;
+		}
+	}
+	&__socials {
+		max-height: 2.7rem;
+		display: flex;
+		column-gap: 2.3rem;
+		padding-left: 3.6rem;
+	}
+}
+@media (max-width: 915px) {
+	.menu {
+		&__list { 
+			& ul {
+				column-gap: 5rem;
+			}
+		}
+	}
+}
+@media (max-width: 740px) {
+	.menu {
+		padding: 6rem 2rem;
+		&__logo {
+			font-size: 2.4rem;
+			line-height: 3.6rem;
+		}
+		&__list { 
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
+		&__socials {
+			max-height: 2.5rem;
+			column-gap: 3rem;
+		}
+	}
+}
+@media (max-width: 660px) {
+	.menu {
+		&__container {
+			flex-wrap: wrap;
+		}
+		&__logo {
+			order: 1;
+		}
+		&__list { 
+			order: 3;
+			padding-top: 3rem;
+		}
+		&__socials {
+			order: 2;
+		}
+	}
+}
+@media (max-width: 359px) {
+	.menu {
+		&__logo {
+			padding-right: 0rem;
+		}
+		&__list { 
+			& ul {
+				column-gap: 3rem;
+			}
+		}
+		&__socials {
+			padding-left: 0rem;
+			column-gap: 2rem;
+		}
+	}
+}
 
+// === / NAVBAR  ===
 
-
-
-
-
-
-
+// === HERO ===
+.hero {
+	padding: 11.1rem 0 15.2rem 0;
+	
+	//? но надо же сделать на весь экран минус высота меню
+}
+// === / HERO ===
+// === PROJECTS ===
+.projects {
+	
+}
+// === / PROJECTS ===
+// === TECHS ===
+.techs {
+	
+}
+// === / TECHS ===
+// === ADD ===
+.add {
+	
+}
+// === / ADD ===
+// === ABOUT ===
+.about {
+	padding-bottom: 9.2rem;
+}
+// === / ABOUT ===
+// === CONTACTS ===
+.contacts {
+	padding-bottom: 6rem;
+}
+// === / CONTACTS ===
 
 
 

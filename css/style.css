@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
 } */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0;
@@ -25,6 +26,11 @@ textarea {
   resize: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -32,6 +38,124 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  background-color: #0F1624;
+  color: #fff;
+}
+
+.wrapper-outer {
+  padding: 0 2rem;
+}
+
+.wrapper-inner {
+  max-width: 115.7rem;
+  margin: 0 auto;
+}
+
+.projects, .techs, .add {
+  padding-bottom: 20rem;
+}
+
+#welcome-section {
+  height: 100vh;
+}
+
+.menu {
+  padding: 4.6rem 2rem;
+}
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__logo {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  padding-right: 4rem;
+}
+.menu__list {
+  max-height: 2.7rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  white-space: nowrap;
+}
+.menu__list ul {
+  display: flex;
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
+}
+.menu__socials {
+  max-height: 2.7rem;
+  display: flex;
+  -moz-column-gap: 2.3rem;
+       column-gap: 2.3rem;
+  padding-left: 3.6rem;
+}
+
+@media (max-width: 915px) {
+  .menu__list ul {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
+@media (max-width: 740px) {
+  .menu {
+    padding: 6rem 2rem;
+  }
+  .menu__logo {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+  .menu__list {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+  .menu__socials {
+    max-height: 2.5rem;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+}
+@media (max-width: 660px) {
+  .menu__container {
+    flex-wrap: wrap;
+  }
+  .menu__logo {
+    order: 1;
+  }
+  .menu__list {
+    order: 3;
+    padding-top: 3rem;
+  }
+  .menu__socials {
+    order: 2;
+  }
+}
+@media (max-width: 359px) {
+  .menu__logo {
+    padding-right: 0rem;
+  }
+  .menu__list ul {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+  .menu__socials {
+    padding-left: 0rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+.hero {
+  padding: 11.1rem 0 15.2rem 0;
+}
+
+.about {
+  padding-bottom: 9.2rem;
+}
+
+.contacts {
+  padding-bottom: 6rem;
 }
