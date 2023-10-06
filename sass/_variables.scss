@@ -1,16 +1,51 @@
-
 $fw-medium: 500;
-$fw-sbold: 600;
+$fw-semi-bold: 600;
+
+$fs-mob-body: 14px;
+$fs-desk-body: 18px;
+
+$fs-mob-small-text: 12px;
+$fs-mob-small-subtitle: 16px;
+$fs-mob-section-subtitle: 20px;
+$fs-mob-main-title: 24px;
+
+$fs-desk-subtitle: 30px;
+$fs-desk-section-subtitle: 46px;
+$fs-desk-main-title: 64px;
 
 $col-white: #fff;
-$col-back-dark: #0F1624;
-$col-grey: #929EB0;
-$col-neon: #00B2FF;
+$col-back-dark: #0f1624;
+$col-grey: #929eb0;
+$col-neon: #00b2ff;
 
-$gradient-1: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
-$gradient-2: linear-gradient(321.62deg, #13ADC7 9.27%, #6978D1 59.96%, #945DD6 85.3%);
-$gradient-3: linear-gradient(326.6deg, #13ADC7 21.25%, #6978D1 58.73%, #945DD6 77.47%);
+$gradient-1: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+$gradient-2: linear-gradient(
+  321.62deg,
+  #13adc7 9.27%,
+  #6978d1 59.96%,
+  #945dd6 85.3%
+);
+$gradient-3: linear-gradient(
+  326.6deg,
+  #13adc7 21.25%,
+  #6978d1 58.73%,
+  #945dd6 77.47%
+);
 
-$circle-shadow: 0px 7px 30px rgba(19, 173, 199, 0.3);
-$button-shadow: 0px 10px 30px rgba(0, 178, 255, 0.35);
+$gradient-hover: linear-gradient(
+  270deg,
+  #31cbe5 0%,
+  #8796ef 66.67%,
+  #b27bf4 100%
+);
+$gradient-active: linear-gradient(
+  270deg,
+  #008fa9 0%,
+  #4b5ab3 66.67%,
+  #6c35ae 100%
+);
 
+$hero-photo-shadow: 0px 20px 50px 0px rgba(0, 178, 255, 0.25);
+$neon-shadow: 0px 10px 30px 0px rgba(0, 178, 255, 0.35);
+$neon-shadow-hov: 0px 10px 30px 0px rgba(0, 178, 255, 0.5);
+$neon-shadow-active: 0px 10px 30px 0px rgba(147, 94, 214, 0.35);

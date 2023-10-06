@@ -2,25 +2,36 @@
   padding: 0;
   margin: 0;
 } */
-h1, h2, h3, h4, h5, h6, p {
-	padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
   margin: 0;
 }
 ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 blockquote {
-	margin: 0;
+  margin: 0;
 }
 cite {
-	font-style: normal;
+  font-style: normal;
 }
 textarea {
-	resize: none;
+  resize: none;
 }
 a {
   color: inherit;
   text-decoration: inherit;
+}
+div,
+nav,
+ul {
+  box-sizing: border-box;
 }
