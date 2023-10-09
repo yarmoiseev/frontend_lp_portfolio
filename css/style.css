@@ -53,6 +53,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: normal;
+  font-style: normal;
   background-color: #0f1624;
   color: #fff;
 }
@@ -69,6 +70,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 70px;
+}
+
+.plain-text {
+  color: #929eb0;
 }
 
 .button button {
@@ -94,6 +99,15 @@ body {
   transform: scale(0.95);
 }
 
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-content {
+  padding-top: 30px;
+}
+
 @media (min-width: 768px) {
   .wrapper-inner {
     max-width: 750px;
@@ -110,6 +124,12 @@ body {
     width: 226px;
     height: 78px;
     font-weight: 600;
+  }
+  .section-title {
+    font-size: 46px;
+  }
+  .section-content {
+    padding-top: 65px;
   }
 }
 @media (min-width: 992px) {
@@ -241,7 +261,6 @@ body {
 }
 .hero__descriptor {
   margin-bottom: 30px;
-  color: #929eb0;
 }
 .hero__photo {
   margin-bottom: 46px;
@@ -348,6 +367,76 @@ body {
 
 .projects {
   margin-top: -10px;
+}
+.projects__container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.projects .project {
+  min-width: 290px;
+  max-width: 570px;
+  background-image: linear-gradient(321.62deg, #13adc7 9.27%, #6978d1 59.96%, #945dd6 85.3%);
+  border-radius: 25px;
+  padding: 1px;
+}
+.projects .project__content {
+  background-color: #0f1624;
+  border-radius: 25px;
+}
+.projects .project__container {
+  padding: 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.projects .project__image img {
+  width: 100%;
+}
+.projects .project__header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.projects .project__controls {
+  display: inline-flex;
+  gap: 5px;
+}
+.projects .project__button_l button {
+  width: 146px;
+}
+.projects .project__button_r button {
+  width: 109px;
+  background-color: #0f1624;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #fff;
+}
+@media (min-width: 768px) {
+  .projects__container {
+    gap: 30px;
+  }
+  .projects .project__container {
+    gap: 45px;
+    padding: 43px;
+  }
+  .projects .project__header {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .projects .project__text-content {
+    padding-bottom: 25px;
+  }
+  .projects .project__controls {
+    gap: 10px;
+  }
+  .projects .project__button_l button {
+    width: 215px;
+  }
+  .projects .project__button_r button {
+    width: 255px;
+  }
 }
 @media (min-width: 1200px) {
   .projects {

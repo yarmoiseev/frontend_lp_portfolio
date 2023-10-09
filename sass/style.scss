@@ -13,6 +13,7 @@ body {
   font-weight: $fw-medium;
   font-size: $fs-mob-body;
   line-height: normal;
+  font-style: normal;
   background-color: $col-back-dark;
   color: $col-white;
 }
@@ -27,7 +28,9 @@ body {
   flex-direction: column;
   gap: 70px;
 }
-
+.plain-text {
+  color: $col-grey;
+}
 .button {
   & button {
     width: 156px;
@@ -52,6 +55,13 @@ body {
     }
   }
 }
+.section-title {
+  font-size: $fs-mob-section-subtitle;
+  font-weight: $fw-semi-bold;
+}
+.section-content {
+  padding-top: 30px;
+}
 @media (min-width: 768px) {
   .wrapper-inner {
     max-width: 750px;
@@ -70,6 +80,12 @@ body {
       height: 78px;
       font-weight: $fw-semi-bold;
     }
+  }
+  .section-title {
+    font-size: $fs-desk-section-subtitle;
+  }
+  .section-content {
+    padding-top: 65px;
   }
 }
 @media (min-width: 992px) {
@@ -211,7 +227,6 @@ body {
   }
   &__descriptor {
     margin-bottom: 30px;
-    color: $col-grey;
   }
   &__photo {
     margin-bottom: 46px;
@@ -320,7 +335,92 @@ body {
 // === PROJECTS ===
 .projects {
   margin-top: -10px;
+  &__container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  & .project {
+    min-width: 290px;
+    max-width: 570px;
+    background-image: $gradient-2;
+    border-radius: 25px;
+    padding: 1px;
+    &__content {
+      background-color: $col-back-dark;
+      border-radius: 25px;
+    }
+    &__container {
+      padding: 28px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__image {
+      & img {
+        width: 100%;
+      }
+    }
+    &__header {
+      font-size: $fs-mob-small-subtitle;
+      font-weight: $fw-semi-bold;
+      margin-bottom: 8px;
+    }
+    &__controls {
+      display: inline-flex;
+      gap: 5px;
+    }
+    &__button {
+      &_l {
+        & button {
+          width: 146px;
+        }
+      }
+      &_r {
+        & button {
+          width: 109px;
+          background-color: $col-back-dark;
+          background-image: none;
+          box-shadow: none;
+          border: 1px solid $col-white;
+        }
+      }
+    }
+  }
+
   @media (min-width: 768px) {
+    &__container {
+      gap: 30px;
+    }
+    & .project {
+      &__container {
+        gap: 45px;
+        padding: 43px;
+      }
+      &__header {
+        font-size: $fs-desk-subtitle;
+        margin-bottom: 15px;
+      }
+      &__text-content {
+        padding-bottom: 25px;
+      }
+      &__controls {
+        gap: 10px;
+      }
+      &__button {
+        &_l {
+          & button {
+            width: 215px;
+          }
+        }
+        &_r {
+          & button {
+            width: 255px;
+          }
+        }
+      }
+    }
   }
   @media (min-width: 992px) {
   }
