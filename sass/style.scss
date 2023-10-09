@@ -346,9 +346,11 @@ body {
     background-image: $gradient-2;
     border-radius: 25px;
     padding: 1px;
+    display: flex;
     &__content {
       background-color: $col-back-dark;
       border-radius: 25px;
+      display: flex;
     }
     &__container {
       padding: 28px;
@@ -356,6 +358,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 25px;
+      justify-content: space-between;
     }
     &__image {
       & img {
