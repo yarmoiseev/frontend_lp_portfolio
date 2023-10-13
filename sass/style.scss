@@ -31,6 +31,17 @@ body {
 .plain-text {
   color: $col-grey;
 }
+.socials {
+  width: 135px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > a,
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
 .button {
   & button {
     width: 156px;
@@ -74,6 +85,14 @@ body {
     flex-direction: column;
     gap: 200px;
   }
+  .socials {
+    width: 127px;
+    & > a,
+    img {
+      width: 27px;
+      height: 27px;
+    }
+  }
   .button {
     & button {
       width: 226px;
@@ -113,17 +132,7 @@ body {
   &__logo {
     font-size: $fs-mob-main-title;
   }
-  &__socials {
-    width: 135px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    & > a,
-    img {
-      width: 25px;
-      height: 25px;
-    }
-  }
+
   &__list {
     margin: 0 auto;
     width: 100%;
@@ -149,21 +158,13 @@ body {
       font-size: $fs-desk-subtitle;
     }
     &__socials {
-      & > a,
-      img {
-        width: 27px;
-        height: 27px;
-      }
+      order: 3;
     }
     &__container {
       flex-wrap: nowrap;
     }
     &__logo {
       order: 1;
-    }
-    &__socials {
-      order: 3;
-      width: 127px;
     }
     &__list {
       order: 2;
@@ -248,7 +249,7 @@ body {
       width: 367px;
       height: 367px;
       position: absolute;
-      background: url("img/big-ellipse.svg") center/cover no-repeat;
+      background: url("../img/big-ellipse.svg") center/cover no-repeat;
       top: 2px;
       left: -200px;
       z-index: -2;
@@ -264,7 +265,7 @@ body {
       left: 147px;
       border-radius: 50%;
       z-index: -1;
-      filter: drop-shadow($neon-shadow);
+      filter: drop-shadow($circle-drop-shadow);
     }
   }
 
@@ -386,6 +387,13 @@ body {
       }
     }
   }
+  @media (max-width: 355px) {
+    & .project {
+      &__container {
+        padding: 14px;
+      }
+    }
+  }
   @media (min-width: 768px) {
     &__container {
       gap: 30px;
@@ -449,13 +457,13 @@ body {
       height: 10px;
       border-radius: 35px;
       background-color: $col-back-lighter;
-      overflow: hidden;
     }
     &__bar-inner {
       width: 100%;
       height: 100%;
       background-image: $gradient-1;
       border-radius: 35px;
+      box-shadow: $neon-shadow;
     }
   }
   @media (min-width: 768px) {
@@ -475,7 +483,6 @@ body {
       &__bar-outer {
         height: 24px;
         border-radius: 35.812px;
-        background-color: transparent;
       }
     }
   }
@@ -483,7 +490,46 @@ body {
 // === / TECHS ===
 // === ADD ===
 .add {
+  &__item-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+  }
+  &__item {
+    display: block;
+    width: 45%;
+    font-size: $fs-mob-small-subtitle;
+    font-weight: $fw-semi-bold;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-image: $gradient-3;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: $neon-shadow;
+    }
+  }
+  @media (max-width: 360px) {
+    &__item {
+      width: 100%;
+    }
+  }
   @media (min-width: 768px) {
+    &__item-list {
+      row-gap: 40px;
+    }
+    &__item {
+      width: 30%;
+      font-size: $fs-desk-subtitle;
+      &::before {
+        width: 24px;
+        height: 24px;
+        margin-right: 24px;
+      }
+    }
   }
   @media (min-width: 992px) {
   }
@@ -494,24 +540,145 @@ body {
 // === ABOUT ===
 .about {
   padding-bottom: 92px;
-
+  &__timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .item {
+    flex: 0 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__year {
+      font-size: $fs-mob-small-subtitle;
+      font-weight: $fw-semi-bold;
+    }
+    &__separator {
+      width: 12px;
+      height: 12px;
+      background-image: $gradient-3;
+      box-shadow: $neon-shadow;
+      border-radius: 50%;
+      position: relative;
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 156px;
+        height: 2px;
+        background-color: $col-white;
+        top: 5px;
+        z-index: -1;
+        left: 3px;
+      }
+    }
+    &__text {
+      color: $col-grey;
+    }
+    &:last-of-type .item__separator::after {
+      display: none;
+    }
+  }
   @media (min-width: 768px) {
+    .item {
+      gap: 23px;
+      &__year {
+        font-size: $fs-desk-subtitle;
+      }
+      &__separator {
+        width: 24px;
+        height: 24px;
+        &::after {
+          width: 191px;
+          height: 5px;
+          top: 9.5px;
+          left: 5px;
+        }
+      }
+    }
   }
   @media (min-width: 992px) {
+    .item {
+      &__separator {
+        &::after {
+          width: 247px;
+        }
+      }
+    }
   }
   @media (min-width: 1200px) {
+    .item {
+      &__separator {
+        &::after {
+          width: 305px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    &__timeline {
+      flex-direction: column-reverse;
+      overflow: hidden;
+    }
+    .item {
+      flex-basis: auto;
+      flex-direction: row;
+      gap: 27px;
+      &__year {
+        display: block;
+        flex: 0 0 38px;
+      }
+      &__separator {
+        flex: 0 0 12px;
+        &::after {
+          transform: rotate(90deg);
+          width: 176px;
+          top: -88px;
+          left: -82px;
+        }
+      }
+      &__text {
+        max-width: 214px;
+        min-width: 176px;
+      }
+    }
   }
 }
 // === / ABOUT ===
 // === CONTACTS ===
 .contacts {
   padding-bottom: 60px;
-
-  @media (min-width: 768px) {
+  &__container {
+    display: flex;
+    justify-content: space-between;
   }
-  @media (min-width: 992px) {
+  &__cta {
+    background: $gradient-1;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
-  @media (min-width: 1200px) {
+  @media (max-width: 768px) {
+    &__container {
+      flex-wrap: wrap;
+      max-width: 440px;
+      row-gap: 40px;
+      column-gap: 26px;
+    }
+    &__cta {
+      order: 1;
+    }
+    &__socials {
+      width: 131px;
+      order: 2;
+    }
+    &__mail {
+      order: 3;
+    }
+    &__telegram {
+      order: 4;
+    }
   }
 }
 // === / CONTACTS ===
