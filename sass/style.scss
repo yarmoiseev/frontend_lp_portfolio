@@ -43,7 +43,10 @@ body {
   }
 }
 .button {
-  & button {
+  & div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
     width: 156px;
     height: 55px;
     border-radius: 43.598px;
@@ -94,7 +97,7 @@ body {
     }
   }
   .button {
-    & button {
+    & div {
       width: 226px;
       height: 78px;
       font-weight: $fw-semi-bold;
@@ -372,12 +375,12 @@ body {
     }
     &__button {
       &_l {
-        & button {
+        & div {
           width: 146px;
         }
       }
       &_r {
-        & button {
+        & div {
           width: 109px;
           background-color: $col-back-dark;
           background-image: none;
@@ -415,12 +418,12 @@ body {
       }
       &__button {
         &_l {
-          & button {
+          & div {
             width: 215px;
           }
         }
         &_r {
-          & button {
+          & div {
             width: 255px;
           }
         }
